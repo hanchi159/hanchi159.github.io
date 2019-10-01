@@ -1,9 +1,21 @@
 <!DOCTYPE html>
+
+
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <title>Bootstrap Example</title>
+  <meta name="viewport" content="max-width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://getbootstrap.com/docs/4.3/layout/grid/">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
+  <style>
+    @media only screen and (max-width: 720px){
+      small{display: none;}
+      iframe {max-width: 100%;}
+    }
+
+  </style>
 </head>
 <body>
   <header>
@@ -12,10 +24,10 @@
 
   <div>
 
-      <div>
+      <div class="row">
         <img  src="images/BSU1.jpg">
         <img  src="images/BSU2.jpg">
-      </div>
+      </div class="col-lg-4">
       <div>
         <p>
     			Horace Mann, the first Massachusetts secretary of education and a key figure in national reform efforts, is an excellent example of the multifaceted approach taken by education reformers. Mann was not an expert in the field of education when he was appointed to the Board of Education but was far better known as a lawyer and member of the Massachusetts Legislature.
@@ -24,7 +36,7 @@
     			Nicholas Tillinghast, the first principal of the Bridgewater Normal School, was born in Taunton, Massachusetts, on September 22, 1804. He attended West Point (1820-1824), taught for a time at Boston English High School and, prior to his Bridgewater experience, served as an assistant to Samuel Newman, principal of Barre Normal School in Massachusetts. A pioneer in education reform and a formidable leader, Tillinghast guided Bridgewater Normal School through its first 13 years.
     		</p>
       </div>
-      <div>
+      <div class="col-lg-8">
         <p>
     			Marshall Conant appointed second principal of Bridgewater State Normal School. Born in Pomfret, VT, on January 5, 1801, Marshall Conant began his teaching career in a district school. At a very young age, he developed an interest in mechanics, astronomy and mathematics. Years later, as principal of the Bridgewater Normal School, he pushed the school in a more scientific direction with an emphasis on science and mathematics. He also laid the groundwork for a future building program.
       	</p>
