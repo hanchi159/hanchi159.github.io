@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  
+  <title>Form validation example using JQuery</title>
+</head>
+<body>
+  <h1> Form validation Example with JQuery </h1>
+  <form>
+    <input type = "text"  id = "password" placeholder="Enter your password" required>
+    <input type = "text"  id = "re_entered" placeholder="Re-enter password" required>
+    <input type = "reset"  id = "reset" >
+    <input type = "button" value="submit" id = "submit" >
+    <br>
+    <div id="error"></div>
+  </form>
+
+  <script >
+    function validPassword(){
+      // if pattern doesn't match, pos will have -1
+      var pos = $("#password").val().search(/^[a-z][A-Z]$/);
+      return (pos !== -1);
+    }
+    function validRe_entered(){
+      var pos = $("re_entered").val().search(/^[a-z][A-Z]$/);
+      return (pos !== -1);
+    }
+
+    $(document).ready(function(){
+      $("#password").change(function() {
+        if (!validPassword()) {
+          $("#error").css("color","red");
+          $("#error").html("Must contain at least one number, one uppercase and lowercase letter, and at least 5 or more characters");
+        }
+      });
+      $("#re_entered").change(function() {
+        if (!validRe_entered()) {
+          $("#error").css("color","blue");
+          $("#error").html("The re entered password does not matched with password you put above !!");
+        }
+      });
+
+      $("#submit").click(function(){
+        if (validPassword() && validRe_entered()) {
+          $("#error").html(" <br> Your password are changed!");
+          $("#error").css("color","green");
+        }
+        else {
+          $("#error").css("color","red");
+          $("#error").html("<br> unvalid password.");
+        }
+        console.log("Your password is changed to " + $("#password").val());
+        return validName() && validPhone();
+      });
+    });
+
+    /*
+    // All of these evaluate to 'true'!
+    console.log(false == '0');
+    console.log(null == undefined);
+
+    // All of these evaluate to 'false'!
+    console.log(false === '0');
+    console.log(null === undefined);
+    */
+  </script>
+</body>
+</html>
