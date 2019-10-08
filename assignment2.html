@@ -16,29 +16,21 @@
             padding:0;
         }
 
+
         div {
             position:relative;
-            height: 50%;
+            height: 100%;
             width:100%;
         }
-
-        div img {
-            position:absolute;
-            top:0;
-            left:0;
-            right:0;
-            bottom:0;
-            margin:auto;
-        }
-
         img {
-            position: fixed;
-            left: 30%;
-            max-width: 50%;
-            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
 
         }
-
+        .header{
+            width: 50%;
+        }
 
         .content {
             position: fixed;
@@ -47,12 +39,12 @@
             color: #000000;
             font-family: "Arial";
             width: 100%;
-            padding: 40px;
+            padding: 30px;
         }
         h1 { font-size: 50pt; }
         p { font-size: 20pt; }
 
-        .vertical-menu {
+        #vertical-menu {
             position: fixed;
             top: 10%;
             right: 0;
@@ -61,13 +53,13 @@
             font-size: 20pt;
         }
 
-        .vertical-menu a {
+        #vertical-menu a {
             color: black; /* Black text color */
             display: block; /* Make the links appear below each other */
             text-decoration: none; /* Remove underline from links */
         }
 
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 1300px) {
             .content {
             display: none;
             }
@@ -76,21 +68,28 @@
 
     </head>
     <body>
-        <div><img src="Hellopolitics.png" alt="Title Logo" width="600" height="200"></div>
-        <div><img id="business_card" src="Business_Card.jpg" alt="Business_Card" width="300" height="600"></div>
-        <aside>
-            <article class="content">
-                    <h1> Chiho Han </h1>
-                    <p>Here is my first home page.</p>
-            </article>
-
-            <div class="vertical-menu">
-                
-                <a href="#"><i class="fas fa-address-card"></i> About me</a>
-                <a href="Chiho Han Resume for CSC PAL.pdf"><i class="far fa-file"></i> resume</a>
-                <a href="#"><i class="fas fa-thumbs-up"></i> hobby</a>
-                <a href="https://www.hellopolitics.org"><i class="fas fa-briefcase"></i> work</a>
-              </div>
-        </aside>
+        <img class="header" src="Hellopolitics.png" alt="Title Logo" width="600" height="200">
+        <img id="business_card" src="Business_Card.jpg" alt="Business_Card" width="320" height="600">
+        <div class="box">
+            <div class = "row">
+                <div class="col">
+                        <aside>
+                                <article class="content">
+                                        <h1> Chiho Han </h1>
+                                        <p>Here is my first home page.</p>
+                                </article>   
+                            </aside>
+                </div>
+                <div class="col">
+                    
+                </div>
+                <div class="col" id="vertical-menu">
+                        <a href="#"><i class="fas fa-address-card"></i> About me</a>
+                        <a href="Chiho Han Resume for CSC PAL.pdf"><i class="far fa-file"></i> resume</a>
+                        <a href="#"><i class="fas fa-thumbs-up"></i> hobby</a>
+                        <a href="https://www.hellopolitics.org"><i class="fas fa-briefcase"></i> work</a>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
